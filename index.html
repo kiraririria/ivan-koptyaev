@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official artist page for Ivan Koptyaev, independent music artist and composer." />
+  <title>Ivan Koptyaev — Official Artist Page</title>
+  <style>
+    :root {
+      --bg: #0d0b0a;
+      --panel: rgba(255, 255, 255, 0.07);
+      --panel-border: rgba(255, 255, 255, 0.12);
+      --text: #f6f1eb;
+      --muted: #c9b9aa;
+      --accent: #d98a45;
+      --accent-2: #f1c27d;
+      --shadow: rgba(0, 0, 0, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 15%, rgba(217, 138, 69, 0.20), transparent 32%),
+        radial-gradient(circle at 90% 20%, rgba(241, 194, 125, 0.12), transparent 30%),
+        linear-gradient(145deg, #070605 0%, #1b1009 45%, #090807 100%);
+      display: grid;
+      place-items: center;
+      padding: 32px 18px;
+    }
+
+    main {
+      width: min(920px, 100%);
+      display: grid;
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 28px;
+      box-shadow: 0 24px 80px var(--shadow);
+      backdrop-filter: blur(20px);
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: clamp(28px, 6vw, 64px);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent-2);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(3rem, 10vw, 6.6rem);
+      line-height: 0.9;
+      letter-spacing: -0.07em;
+    }
+
+    .subtitle {
+      max-width: 680px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      line-height: 1.6;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    a.button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      color: #160d08;
+      background: linear-gradient(135deg, var(--accent-2), var(--accent));
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    a.button.secondary {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .info {
+      padding: 24px;
+    }
+
+    .info h2 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      color: var(--accent-2);
+    }
+
+    .info p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+
+    .info a {
+      color: var(--text);
+      text-decoration-color: rgba(255,255,255,0.4);
+      text-underline-offset: 4px;
+    }
+
+    footer {
+      color: rgba(246, 241, 235, 0.55);
+      font-size: 0.92rem;
+      text-align: center;
+      padding: 4px 0 0;
+    }
+
+    @media (max-width: 740px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero { border-radius: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card hero" aria-labelledby="artist-name">
+      <div>
+        <p class="eyebrow">Official artist page</p>
+        <h1 id="artist-name">Ivan Koptyaev</h1>
+        <p class="subtitle">
+          Ivan Koptyaev is an independent music artist and composer. This page is used to verify the official artist profile and contact information.
+        </p>
+        <div class="actions">
+          <a class="button" href="https://open.spotify.com/track/2Uf0rsS929tGyGKrfNfg7N?si=dc836f460ee54b91" rel="noopener noreferrer" target="_blank">Listen on Spotify</a>
+          <a class="button secondary" href="mailto:evan.ko@mail.ru">Verification contact</a>
+          <a class="button secondary" href="mailto:cometalogic@gmail.com">Business email</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Artist details">
+      <article class="card info">
+        <h2>Artist name</h2>
+        <p>Ivan Koptyaev</p>
+      </article>
+      <article class="card info">
+        <h2>Verification email</h2>
+        <p><a href="mailto:evan.ko@mail.ru">evan.ko@mail.ru</a></p>
+      </article>
+      <article class="card info">
+        <h2>Business email</h2>
+        <p><a href="mailto:cometalogic@gmail.com">cometalogic@gmail.com</a></p>
+      </article>
+      <article class="card info">
+        <h2>Release</h2>
+        <p>“Обними меня, весна” · Single · 2026</p>
+      </article>
+      <article class="card info">
+        <h2>Role</h2>
+        <p>Independent music artist / composer</p>
+      </article>
+      <article class="card info">
+        <h2>Label / copyright</h2>
+        <p>cometalogic</p>
+      </article>
+      <article class="card info">
+        <h2>Distributor</h2>
+        <p>RuMedia</p>
+      </article>
+    </section>
+
+    <footer>
+      © 2026 cometalogic. Official page for Ivan Koptyaev.
+    </footer>
+  </main>
+</body>
+</html>
